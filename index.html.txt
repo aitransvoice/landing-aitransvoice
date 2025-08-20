@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AITRANSVOICE – Traducción de llamadas en tiempo real</title>
+  <meta name="description" content="AITRANSVOICE es un software de traducción de llamadas en tiempo real para call centers y negocios. Proyecto registrado por Ruth del Carmen García de Raposo (ONDA/ONAPI).">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🎙️</text></svg>">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="AITRANSVOICE – Traducción de llamadas en tiempo real">
+  <meta property="og:description" content="Software para traducir llamadas de voz en tiempo real. En desarrollo.">
+  <meta property="og:type" content="website">
+
+  <!-- Simple styles -->
+  <style>
+    :root { --bg:#0f172a; --card:#111827; --fg:#e5e7eb; --muted:#9ca3af; --accent:#22d3ee; --ok:#10b981; }
+    *{box-sizing:border-box} body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,sans-serif;background:linear-gradient(180deg,#0b1022,#0f172a 60%);color:var(--fg)}
+    .wrap{max-width:960px;margin:0 auto;padding:28px}
+    .hero{display:grid;gap:16px;padding:36px 24px;background:rgba(17,24,39,.6);border:1px solid rgba(255,255,255,.08);border-radius:16px}
+    h1{margin:0;font-size:2rem;letter-spacing:.2px}
+    .sub{color:var(--muted)}
+    .badge{display:inline-block;background:rgba(34,211,238,.15);color:var(--accent);border:1px solid rgba(34,211,238,.35);padding:6px 10px;border-radius:999px;font-size:.85rem;margin-top:4px}
+    .grid{display:grid;gap:16px;margin-top:28px}
+    @media(min-width:840px){.grid{grid-template-columns:1fr 1fr}}
+    .card{background:rgba(17,24,39,.7);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:18px}
+    h2{font-size:1.25rem;margin:0 0 8px}
+    h3{font-size:1.05rem;margin:16px 0 8px}
+    p,li{line-height:1.6}
+    code,kbd{background:#0b1022;border:1px solid rgba(255,255,255,.08);padding:2px 6px;border-radius:6px}
+    a{color:var(--accent);text-decoration:none} a:hover{text-decoration:underline}
+    .cta{display:inline-flex;gap:10px;align-items:center;background:linear-gradient(90deg,#22d3ee,#10b981);color:#05202a;border:none;border-radius:12px;padding:10px 14px;font-weight:600}
+    footer{margin-top:32px;color:var(--muted);font-size:.9rem}
+    .en{opacity:.9;margin-top:8px;border-top:1px dashed rgba(255,255,255,.1);padding-top:8px}
+    .ok{color:var(--ok);font-weight:600}
+  </style>
+
+  <!-- JSON-LD basic org/site for trust -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "AITRANSVOICE",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Cross-platform",
+    "description": "Traducción de llamadas de voz en tiempo real para call centers y negocios.",
+    "url": "https://aitransvoice.com",
+    "creator": {
+      "@type": "Person",
+      "name": "Ruth del Carmen García de Raposo"
+    }
+  }
+  </script>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <div>
+        <span class="badge">En desarrollo (versión de pruebas)</span>
+        <h1>AITRANSVOICE</h1>
+        <p class="sub">Software de <strong>traducción de llamadas en tiempo real</strong> para call centers y negocios. El objetivo es permitir que cada persona hable en su idioma y sea entendida al instante del otro lado de la llamada.</p>
+        <a class="cta" href="#contacto">Contacto oficial</a>
+      </div>
+    </section>
+
+    <div class="grid">
+      <section class="card">
+        <h2>Descripción del caso de uso (para Twilio)</h2>
+        <p><strong>Propósito:</strong> Integrar servicios de telefonía (voz entrante/saliente) a un motor de traducción en tiempo real. El sistema toma una llamada, reconoce el idioma, traduce la voz, y reproduce la respuesta en el idioma del receptor.</p>
+        <h3>Cómo se utilizarán los servicios de Twilio</h3>
+        <ul>
+          <li><strong>SIP/Voice:</strong> Recepción de llamadas entrantes y establecimiento de llamadas salientes para pruebas internas.</li>
+          <li><strong>Webhooks:</strong> Enrutamiento de audio a módulos de STT/TTS y traducción.</li>
+          <li><strong>Estado actual:</strong> Fase de <em>desarrollo y validación técnica</em> con volumen bajo, personal y controlado (no comercial).</li>
+        </ul>
+        <p><strong>No se enviarán SMS de marketing.</strong> El proyecto no contempla campañas promocionales ni mensajería masiva. Cualquier uso de SMS sería transaccional (p. ej., verificación de 2FA) en etapas posteriores.</p>
+
+        <div class="en">
+          <h2>Use case (English)</h2>
+          <p><strong>Purpose:</strong> Integrate telephony (inbound/outbound voice) with a real-time translation engine. The system detects the caller’s language, translates speech, and plays the translated audio to the other party.</p>
+          <h3>How Twilio will be used</h3>
+          <ul>
+            <li><strong>SIP/Voice:</strong> Inbound/outbound calls for internal testing.</li>
+            <li><strong>Webhooks:</strong> Stream audio to STT/TTS + translation modules.</li>
+            <li><strong>Current stage:</strong> <em>Development/validation</em> only; low, controlled, non-commercial traffic.</li>
+          </ul>
+          <p><strong>No marketing SMS.</strong> If SMS is ever used, it would be transactional only (e.g., 2FA), not promotional.</p>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Confianza, legal y cumplimiento</h2>
+        <ul>
+          <li><strong>Autora/Propietaria:</strong> <span class="ok">Ruth del Carmen García de Raposo</span>.</li>
+          <li><strong>Propiedad Intelectual:</strong> Registros/depósitos en <strong>ONDA</strong> y <strong>ONAPI</strong> (República Dominicana). Documentación disponible bajo solicitud.</li>
+          <li><strong>Entorno de pruebas:</strong> Sin envío de spam. Volumen limitado, solo validación técnica.</li>
+          <li><strong>Manejo de datos:</strong> Audio y metadatos de llamadas usadas para pruebas internas. Se minimiza la retención y se elimina periódicamente.</li>
+          <li><strong>KYC:</strong> El nombre legal de la autora del proyecto es el indicado arriba para que coincida con la verificación de identidad.</li>
+        </ul>
+
+        <div class="en">
+          <h2>Trust & Compliance (English)</h2>
+          <ul>
+            <li><strong>Owner:</strong> <span class="ok">Ruth del Carmen García de Raposo</span> (legal name for KYC).</li>
+            <li><strong>IP:</strong> Registered/deposited with ONDA and ONAPI (Dominican Republic). Evidence available upon request.</li>
+            <li><strong>Testing only:</strong> No spam, low volume, technical validation.</li>
+            <li><strong>Data handling:</strong> Audio/metadata used for internal QA; retention minimized and periodically purged.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="card" id="politicas">
+        <h2>Políticas esenciales</h2>
+        <h3>Anti-spam y uso aceptable</h3>
+        <p>AITRANSVOICE <strong>no</strong> se utilizará para spam, robocalls o campañas de mensajería masiva. Cualquier integración de voz/SMS seguirá políticas de consentimiento y leyes aplicables.</p>
+        <h3>Privacidad</h3>
+        <p>Durante esta fase de pruebas, los datos se emplean únicamente para mejorar la calidad técnica del sistema. No se venden datos a terceros. Puedes solicitar la eliminación de datos de prueba en cualquier momento.</p>
+
+        <div class="en">
+          <h3>Essential Policies (English)</h3>
+          <p>No spam or robocalls. Any future SMS/voice will comply with consent and applicable regulations. Test data is used only for QA and is not sold to third parties.</p>
+        </div>
+      </section>
+
+      <section class="card" id="contacto">
+        <h2>Contacto</h2>
+        <p><strong>Correo:</strong> <a href="mailto:contacto@aitransvoice.com">contacto@aitransvoice.com</a></p>
+        <p><strong>Dominio:</strong> <a href="https://aitransvoice.com">aitransvoice.com</a></p>
+        <p><em>Si Twilio requiere verificación desde un correo del dominio, escribiremos desde una dirección @aitransvoice.com.</em></p>
+
+        <div class="en">
+          <h2>Contact (English)</h2>
+          <p><strong>Email:</strong> <a href="mailto:contacto@aitransvoice.com">contacto@aitransvoice.com</a></p>
+          <p>We can reply from an <code>@aitransvoice.com</code> address for domain verification if needed.</p>
+        </div>
+      </section>
+    </div>
+
+    <footer>
+      © <span id="y"></span> AITRANSVOICE. Proyecto en desarrollo. — Registrado por Ruth del Carmen García de Raposo (ONDA/ONAPI).
+    </footer>
+  </div>
+
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
